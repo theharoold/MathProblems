@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MathSolver 3000</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Solve math problems">
+        <meta name="keywords" content="quadratic, formula, matrix, solver, help">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="quadraticFormula.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+              <div class="navbar-header">
+                <span class="navbar-brand" href="#">MathSolver 3000</span>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="container">
+            <form class="form-inline">
+                <div class="form-group">
+                  <label for="input_a">a:</label>
+                  <input type="input_a" class="form-control" id="input_a">
+                </div>
+                <div class="form-group">
+                  <label for="input_b">b:</label>
+                  <input type="input_b" class="form-control" id="input_b">
+                </div>
+                <div class="form-group">
+                    <label for="input_c">c:</label>
+                    <input type="input_c" class="form-control" id="input_c">
+                  </div>
+                <button type="button" onclick="getUserInput()" class="btn btn-default">Compute</button>
+              </form> 
+          </div>
+    </body>
+</html>
