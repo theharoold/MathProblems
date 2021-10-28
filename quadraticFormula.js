@@ -1,12 +1,4 @@
-// regex for validating numbers:
-// /^\s*[+-]?(\d+|\.\d+|\d+\.\d+|\d+\.)(e[+-]?\d+)?\s*$/
-// found on stackoverflow https://stackoverflow.com/questions/15699094/how-to-validate-a-number-field-in-javascript-using-regular-expressions
-
 function validateInput() {
-
-    // CSS changes to invalid input will be moved to a different file 
-    // When front-end is done
-
     let field_a = document.getElementById("input_a");
     let field_b = document.getElementById("input_b");
     let field_c = document.getElementById("input_c");
@@ -22,51 +14,9 @@ function validateInput() {
         };
     } else 
         return null;
-
-    // Deprecated due to changing input type to number,
-    // Will be removed in the next pull request
-    /*
-    const regex = /^\s*[+-]?(\d+|\.\d+|\d+\.\d+|\d+\.)(e[+-]?\d+)?\s*$/;
-    if ((regex.test(value_a)) && (regex.test(value_b)) && (regex.test(value_c))) {
-        field_a.style.borderColor = "rgb(204, 204, 204)";
-        field_a.setCustomValidity("");
-        field_b.style.borderColor = "rgb(204, 204, 204)";
-        field_b.setCustomValidity("");
-        field_c.style.borderColor = "rgb(204, 204, 204)";
-        field_c.setCustomValidity("");
-
-        return {
-            a: Number(value_a), 
-            b: Number(value_b), 
-            c: Number(value_c)
-        };
-    } else {
-        if (!regex.test(value_a)) {
-            field_a.setCustomValidity("Invalid input");
-            field_a.style.borderColor = "red";
-        } else {
-            field_a.style.borderColor = "rgb(204, 204, 204)";
-            field_a.setCustomValidity("");
-        }
-        if (!regex.test(value_b)) {
-            field_b.setCustomValidity("Invalid input");
-            field_b.style.borderColor = "red"; 
-        } else {
-            field_a.style.borderColor = "rgb(204, 204, 204)";
-            field_a.setCustomValidity("");
-        }
-        if (!regex.test(value_c)) {
-            field_c.setCustomValidity("Invalid input");
-            field_c.style.borderColor = "red";
-        } else {
-            field_a.style.borderColor = "rgb(204, 204, 204)";
-            field_a.setCustomValidity("");
-        }
-    } 
-    return null; */
 }
 
-function getUserInput() {
+function processInput() {
     let values = validateInput();
     if (values) {
         // Solve the quadratic equation
@@ -106,7 +56,7 @@ function getUserInput() {
 // Placeholder function - is subject to change,
 // depending on the new front-end 
 function displayInput() {
-    let values = getUserInput();
+    let values = processInput();
     if (values) {
         let displaySpan1 = document.getElementById("result_quadratic_x1");
         let displaySpan2 = document.getElementById("result_quadratic_x2");
