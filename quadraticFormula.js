@@ -3,6 +3,10 @@
 // found on stackoverflow https://stackoverflow.com/questions/15699094/how-to-validate-a-number-field-in-javascript-using-regular-expressions
 
 function validateInput() {
+
+    // CSS changes to invalid input will be moved to a different file 
+    // When front-end is done
+
     let field_a = document.getElementById("input_a");
     let field_b = document.getElementById("input_b");
     let field_c = document.getElementById("input_c");
@@ -81,6 +85,9 @@ function getUserInput() {
         return null;
 }
 
+
+// Placeholder function - is subject to change,
+// depending on the new front-end 
 function displayInput() {
     let values = getUserInput();
     if (values) {
