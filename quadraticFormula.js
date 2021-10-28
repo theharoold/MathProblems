@@ -13,6 +13,19 @@ function validateInput() {
     let value_a = field_a.value;
     let value_b = field_b.value;
     let value_c = field_c.value;
+    
+    if (value_a && value_b && value_c) {
+        return {
+            a: value_a, 
+            b: value_b, 
+            c: value_c
+        };
+    } else 
+        return null;
+
+    // Deprecated due to changing input type to number,
+    // Will be removed in the next pull request
+    /*
     const regex = /^\s*[+-]?(\d+|\.\d+|\d+\.\d+|\d+\.)(e[+-]?\d+)?\s*$/;
     if ((regex.test(value_a)) && (regex.test(value_b)) && (regex.test(value_c))) {
         field_a.style.borderColor = "rgb(204, 204, 204)";
@@ -49,8 +62,8 @@ function validateInput() {
             field_a.style.borderColor = "rgb(204, 204, 204)";
             field_a.setCustomValidity("");
         }
-    }
-    return null;
+    } 
+    return null; */
 }
 
 function getUserInput() {
@@ -63,12 +76,15 @@ function getUserInput() {
             return {
                 x1: ( (-values.b - Math.sqrt(Math.pow(values.b,2)-4*values.a*values.c)) / (2*values.a)),
                 x2: ( (-values.b + Math.sqrt(Math.pow(values.b,2)-4*values.a*values.c)) / (2*values.a)),
+                a: values.a,
                 imaginary: false
             };
         } else if (D == 0) {
             return {
                 x1: -values.b/(2*values.a),
                 x2: -values.b/(2*values.a),
+                // a is needed to write the function in a(x-x1)(x-x2) format
+                a: values.a,
                 imaginary: false
             };
         } else {
@@ -77,6 +93,7 @@ function getUserInput() {
                 x_real: (-values.b/(2*values.a)),
                 x_imaginary1: -(Math.pow(values.b,2) - 4*values.a*values.c),
                 x_imaginary2: 2*values.a,
+                a: values.a,
                 imaginary: true
             };
         }
