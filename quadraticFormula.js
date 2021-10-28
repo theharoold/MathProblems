@@ -53,12 +53,12 @@ function getUserInput() {
     let values = validateInput();
     if (values) {
         // Solve the quadratic equation
-        const D = (values.b*values.b - 4*values.a*values.c) > 0;
-        console.log(values.a + " " + values.b + " " + values.c);
+        const D = values.b*values.b - 4*values.a*values.c;
+        //console.log(values.a + " " + values.b + " " + values.c + " D = " + D);
         if (D > 0) {
             return {
-                x1: ( (-values.b - Math.sqrt(Math.pow(values.b,2)-4*values.a*values.c)) / 2*values.a),
-                x2: ( (-values.b + Math.sqrt(Math.pow(values.b,2)-4*values.a*values.c)) / 2*values.a),
+                x1: ( (-values.b - Math.sqrt(Math.pow(values.b,2)-4*values.a*values.c)) / (2*values.a)),
+                x2: ( (-values.b + Math.sqrt(Math.pow(values.b,2)-4*values.a*values.c)) / (2*values.a)),
                 imaginary: false
             };
         } else if (D == 0) {
@@ -69,11 +69,29 @@ function getUserInput() {
             };
         } else {
             // D < 0
-            // ...
             return {
-                // to do
+                x_real: (-values.b/(2*values.a)),
+                x_imaginary1: -(Math.pow(values.b,2) - 4*values.a*values.c),
+                x_imaginary2: 2*values.a,
                 imaginary: true
             };
+        }
+    }
+    else
+        return null;
+}
+
+function displayInput() {
+    let values = getUserInput();
+    if (values) {
+        let displaySpan1 = document.getElementById("result_quadratic_x1");
+        let displaySpan2 = document.getElementById("result_quadratic_x2");
+        if (values.imaginary) {
+            displaySpan1.innerHTML = "x1 = " + values.x_real + " - <i>i</i>(&Sqrt;" + values.x_imaginary1 + ")/" + values.x_imaginary2;
+            displaySpan2.innerHTML = "x2 = " + values.x_real + " + <i>i</i>(&Sqrt;" + values.x_imaginary1 + ")/" + values.x_imaginary2;
+        } else {
+            displaySpan1.innerHTML = "x1 = " + values.x1;
+            displaySpan2.innerHTML = "x2 = " + values.x2;
         }
     }
 }
