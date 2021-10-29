@@ -70,26 +70,25 @@ function processInput() {
 function displayInput() {
   let values = processInput();
   if (values) {
-    let displaySpan1 = document.getElementById("result_quadratic_x1");
-    let displaySpan2 = document.getElementById("result_quadratic_x2");
+    let resultParagraphX1 = document.getElementById("result_quadratic_x1");
+    let resultParagraphX2 = document.getElementById("result_quadratic_x2");
+
     if (values.imaginary) {
-      displaySpan1.innerHTML =
-        "x1 = " +
-        values.x_real +
-        " - <i>i</i>(&Sqrt;" +
-        values.x_imaginary1 +
-        ")/" +
-        values.x_imaginary2;
-      displaySpan2.innerHTML =
-        "x2 = " +
-        values.x_real +
-        " + <i>i</i>(&Sqrt;" +
-        values.x_imaginary1 +
-        ")/" +
-        values.x_imaginary2;
+      let real = values.x_real.toFixed(3);
+      let imaginary1 = values.x_imaginary1;
+      let imaginary2 = values.x_imaginary2;
+
+      resultParagraphX1.innerHTML = // (\frac{\sqrt imaginary1}{imaginary2})
+      "\\(x_1=\\)" + " " + "\\(" + real + "\\)" + " \\(- \\frac{\\sqrt" + imaginary1 +"}{"+ imaginary2 +"}i\\)";
+  
+      resultParagraphX2.innerHTML = 
+      "\\(x_2=\\)" + " " + "\\(" + real + "\\)" + " \\(+ \\frac{\\sqrt" + imaginary1 +"}{"+ imaginary2 +"}i\\)";
+                
     } else {
-      displaySpan1.innerHTML = "x1 = " + values.x1;
-      displaySpan2.innerHTML = "x2 = " + values.x2;
+      displaySpan1.innerHTML = "\\(x_1=\\)" + "\\(" + values.x1 + "\\)";
+      displaySpan2.innerHTML = "\\(x_2=\\)" + "\\(" + values.x2 + "\\)";
     }
+    
+    MathJax.typeset(); // render math equations using MathJax
   }
 }
