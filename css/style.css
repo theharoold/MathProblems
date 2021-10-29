@@ -65,6 +65,17 @@ strong {
   border-radius: 10px;
 }
 
+.button-secondary {
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: var(--text-color);
+  background: var(--background-color);
+  display: inline-block;
+  font-weight: normal;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
 .btn{
   margin-top: 20px;
   padding: 10px 20px;
@@ -196,9 +207,14 @@ nav ul li a:hover {
   margin-top: 15%;
 }
 
+#info p {
+  max-width: 650px;
+  line-height: 1.8rem;
+}
+
 #form-wrap{
   width: 500px;
-  height: 380px;
+  height: 450px;
   background: var(--header-background-color);
   margin-top: 5%;
   padding: 15px 26px;
@@ -262,4 +278,3 @@ input[type=number]:focus{
   color: var(--text-color);
   font-size: 1.1rem;
 }
-
