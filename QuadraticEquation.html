@@ -10,7 +10,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="js/quadraticFormula.js"></script>
+
+  
 </head>
 <body>
   <header>
@@ -30,9 +34,11 @@
       <div class="flex-container">
         <div id="info">
           <h1 class="heading-1">Quadratic equation solver</h1>
-          <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magnam accusantium totam. <br> Quisquam veritatis nam odit iure commodi reiciendis placeat! Dolorum excepturi natus <br> aliquam molestiae voluptatem fugit eius deserunt facilis.</p>
-          <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti reprehenderit eos <br> dolore architecto. Est repellat alias delectus sit inventore sequi.</p>
-          <a href="#" class="button-primary">Read More</a>
+          <p class="paragraph">In algebra, a quadratic equation (from the Latin quadratus for "square") is any equation that can be rearranged in standard form as: 
+            \(ax^2 + bx + c = 0\)</p>
+          <p class="paragraph">When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are:
+            \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]</p>
+          <a href="#" class="button-secondary">Read More</a>
         </div>
         <div id="form-wrap">
           <h2 class="heading-2">
@@ -50,9 +56,11 @@
             </div>
             <button type="button" class="btn glow-btn" onclick="displayInput()">Compute</button>
           </form>
-          <p><strong>Result:</strong><br>
-            <span id="result_quadratic_x1"></span><br>
-            <span id="result_quadratic_x2"></span></p>
+          <p><strong>Result:</strong><br></p>
+            <!-- <span id=""></span><br>
+            <span id=""></span></p> -->
+            <p id="result_quadratic_x1"></p>
+            <p id="result_quadratic_x2"></p>
         </div>
       </div>
     </div>
