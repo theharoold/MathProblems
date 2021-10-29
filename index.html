@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>MathSolver 3000</title>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Solve math problems">
-  <meta name="keywords" content="quadratic, formula, matrix, solver, help">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <script src="quadraticFormula.js"></script>
+  <title>MathSolver | Home</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -25,34 +20,40 @@
       </ul>
     </nav>         
   </header>
-  <section id="main-section">
+  <section id="main-section" class="pt-2pr">
     <div class="wrap-2">
-      <div class="flex-container">
-        <div id="info">
-          <h1 class="heading-1">Quadratic equation solver</h1>
-          <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magnam accusantium totam. <br> Quisquam veritatis nam odit iure commodi reiciendis placeat! Dolorum excepturi natus <br> aliquam molestiae voluptatem fugit eius deserunt facilis.</p>
-          <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti reprehenderit eos <br> dolore architecto. Est repellat alias delectus sit inventore sequi.</p>
-          <a href="#" class="button-primary">Read More</a>
+      <h1 class="heading-1">Math Solver</h1>
+      <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis ipsam dignissimos in maxime fugit ex.</p>
+      <br>
+      <div class="flex-container2">
+        <div class="flex-item">
+          <h2 class="heading-2">Math</h2>
+          <div class="hr"></div>
+          <ul class="home-nav">
+            <li><a href="QuadraticEquation.html">Quadratic Equation Solver</a></li>
+            <li><a href="#">Prime number checker</a></li>
+            <li><a href="#">Scientific Calculator</a></li>
+            <li><a href="#">Matrix Processor</a></li>
+            <li><a href="#">Random Number Calculator</a></li>
+          </ul>
         </div>
-        <div id="form-wrap">
-          <h2 class="heading-2">
-            Calculate
-          </h2>
-          <form>
-            <div class="form-item">
-              <input type="number" class="number-input" id="input_a" placeholder="a">
-            </div>
-            <div class="form-item">           
-              <input type="number" class="number-input" id="input_b" placeholder="b">
-            </div>
-            <div class="form-item">                        
-                <input type="number" class="number-input" id="input_c" placeholder="c">
-            </div>
-            <button type="button" class="btn glow-btn" onclick="displayInput()">Compute</button>
-          </form>
-          <p><strong>Result:</strong><br>
-            <span id="result_quadratic_x1"></span><br>
-            <span id="result_quadratic_x2"></span></p>
+        <div class="flex-item">
+          <h2 class="heading-2">Finance</h2>
+          <div class="hr"></div>
+          <ul class="home-nav">
+            <li><a href="#">Investment Calculator</a></li>
+            <li><a href="#">Mortgage Calculator</a></li>
+            <li><a href="#">Loan Calculator</a></li>
+          </ul>
+        </div>
+        <div class="flex-item">
+          <h2 class="heading-2">Fitness & Health</h2>
+          <div class="hr"></div>
+          <ul class="home-nav">
+            <li><a href="#">BMI Calculator</a></li>
+            <li><a href="#">Ideal Weight Calculator</a></li>
+            <li><a href="#">Calorie Intake Calculator</a></li>
+          </ul>
         </div>
       </div>
     </div>
