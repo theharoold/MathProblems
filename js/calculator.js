@@ -25,7 +25,7 @@ function concatenateOperand(part) {
     switch (part) {
         // 0-9 represent digits, 10 represents .
         case "0":
-            current_number = (current_number != "" && current_number != "-") ? current_number + "0" : current_number;
+            current_number = (current_number != "0" && current_number != "-") ? current_number + "0" : current_number;
             break;
         case "1":case "2":case "3":case "4":case "5":case "6":case "7":case "8":case "9":
             if (current_number == "0")  
@@ -48,28 +48,3 @@ function concatenateOperand(part) {
             break;
     }
 }
-
-
-/* Some quick test cases
-function callTheFunction() {
-    concatenateOperand("10");
-    console.log(current_number);
-    concatenateOperand("0");
-    console.log(current_number);
-    concatenateOperand("0");
-    console.log(current_number);
-    concatenateOperand("1");
-    console.log(current_number);
-    concatenateOperand("0");
-    console.log(current_number);
-    concatenateOperand("5");
-    console.log(current_number);
-    concatenateOperand("-1");
-    console.log(current_number);
-    concatenateOperand("10");
-    console.log(current_number);
-    concatenateOperand("5");
-    console.log(current_number);
-    concatenateOperand("-1");
-    console.log(current_number);
-} */
