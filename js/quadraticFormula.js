@@ -25,6 +25,24 @@ function checkField(field, value) { // will indicate if input is empty
     field.style.outline = !value ? "2px solid red" : "none";
 }
 
+function previewEquation() {
+  let preview = document.getElementById("equationPreview");
+  let values = validateInput();
+
+  let a = values.a;
+  let b = values.b;
+  let c = values.c;
+
+  preview.innerHTML = 
+  "\\(" + a + "\\)" + "\\(x^2\\)" + // ax^2
+  " " + "\\(+\\)" + " " + // space + space
+  "\\(" + b + "\\)" + "\\(x\\)" + //bx
+  " " + "\\(+\\)" + " " + // space + space
+  "\\(" + c + "\\)" + " " + "\\(=\\)" + " " + "\\(0\\)";
+
+  MathJax.typeset();
+}
+
 function processInput() {
   let values = validateInput();
   if (values) {
@@ -72,6 +90,8 @@ function displayInput() {
   if (values) {
     let resultParagraphX1 = document.getElementById("result_quadratic_x1");
     let resultParagraphX2 = document.getElementById("result_quadratic_x2");
+
+    previewEquation();
 
     if (values.imaginary) {
       let real = values.x_real.toFixed(3);
