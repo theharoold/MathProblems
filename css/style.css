@@ -22,7 +22,7 @@ h1, h2, h3 {
 
 p {
   margin: 10px 0;
-  color: white;
+  color: #fff;
 }
 a {
   color: #fff;
@@ -47,12 +47,39 @@ a {
   background: #fff;
 }
 
+.btn-saints {
+  background-color: #775297;
+  color: #fff;
+}
+
+.btn-light-red {
+  color: rgb(255, 31, 31);
+  background: #fff;
+}
+
+.btn-red {
+  background-color: rgb(231, 59, 59);
+  color: #fff;
+}
+
 .btn:hover {
   box-shadow: 0 0 20px rgba(48, 155, 255, 0.747);
 }
 
 .btn-light:hover {
   box-shadow: 0 0 20px rgba(48, 155, 255, 0.747);
+}
+
+.btn-light-red:hover {
+  box-shadow: 0 0 20px rgba(255, 48, 48, 0.747);
+}
+
+.btn-red:hover {
+  box-shadow: 0 0 20px rgba(255, 48, 48, 0.747);
+}
+
+.btn-saints:hover {
+  box-shadow: 0 0 20px #a264d8d8;
 }
 
 .heading {
@@ -64,12 +91,14 @@ a {
 
 .heading-l { font-size: 3rem; }
 .heading-m { font-size: 2rem; }
-.heading-s { font-size: 1.5rem; }
+.heading-s { font-size: 1.3rem; }
 
 .py-1 { padding: 10px 0;}
 .py-2 { padding: 20px 0;}
 .py-3 { padding: 30px 0;}
 
+.p-20 { font-size: 20px; }
+.p-19 { font-size: 19px; }
 .p-l8 { font-size: 18px; }
 .p-15 { font-size: 15px; }
 
@@ -91,6 +120,30 @@ a {
 .flex-container {
   display: flex;
   height: 100%;
+}
+
+.theme {
+  padding:0.5px 7px;
+  margin-left: 10px;
+  font-size: 12px;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  font-weight: 500;
+  position: relative;
+  bottom: 5px;
+}
+
+.theme-red{
+  background: rgb(235, 61, 61);
+}
+
+.theme-blue{
+  background: dodgerblue;
+}
+
+.inline {
+  display: inline;
 }
 
 /* Navigation Styling */
@@ -121,7 +174,7 @@ header {
 
 #navbar .logo i {
   margin-right: 10px;
-  color: #4b98f1;
+  color: #f4f4f4;
 }
 
 /* #navbar img{
@@ -262,8 +315,9 @@ header {
 .card-bottom p{
   height: 62%;
 }
+
 #card-1 .card-top {
-  background: linear-gradient(rgba(36, 129, 236, 0.9), rgba(22, 22, 22,0.8)),
+  background: linear-gradient(#775297e5, rgba(22, 22, 22,0.8)),
   url('https://images.unsplash.com/photo-1561112079-2c3226d9c559?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80') no-repeat center center/cover;
 }
 
@@ -303,6 +357,104 @@ header {
   padding: 10px 20px;
 }
 
+/* Quadratic Equation Solver Styling */
+#showcase-quadratic {
+  margin-top: -6vh;
+  height: 40vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(rgba(36, 123, 236, 0.9), rgb(22, 22, 22)), 
+  url("https://images.unsplash.com/photo-1563212034-a3c52118cce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") 
+  fixed no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+}
+
+#showcase-quadratic .flex-container {
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+#showcase-quadratic .buttons-wrap {
+  /* border: 1px #ddd solid; */
+  height: 50px;
+  width: 400px;
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#showcase-quadratic .btn {
+  width: 180px;
+}
+
+/* Main Quadratic Section Styling */
+#quadratic-main {
+  padding-top: 30px;
+}
+
+#quadratic-main .btn {
+  width: 100%;
+  margin: 10px 0;
+  padding: 13px 10px;
+}
+
+#quadratic-main .info-left {
+  max-width: 55%;
+}
+
+#quadratic-main .form-wrap {
+  background: rgb(39, 39, 39);
+  width: 50%;
+  height: 360px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#quadratic-main .flex-container {
+  align-items: center;
+}
+
+#quadratic-main .form-wrap .flex-container {
+  justify-content: space-between;
+}
+
+#quadratic-main .number-input {
+  width: 30%;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #f4f4f49d;
+  background-color: #f4f4f400;
+  color: #fff;
+}
+
+#quadratic-main .form-wrap .form-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#quadratic-main .form-wrap .form-heading #equationPreview{
+  background-color: #353535;
+  padding: 3px 8px;
+}
+
+#quadratic-main .number-input:focus {
+  border-color: #f4f4f4;
+}
+
+
+/* Footer Styling */
+
 /* Scrollbar Styling */
 
 /* width */
@@ -318,6 +470,6 @@ header {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #1d6dc9;
+  background: #d8d8d8;
   border-radius: 10px;
 }
