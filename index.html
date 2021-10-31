@@ -5,57 +5,82 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MathSolver | Home</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <nav class="wrap-1">
-      <a href="#">
-        <h2 id ="logo" class="txt-primary">Math<strong>Solver</strong></h2>
-      </a>
-      <ul class="navigationLinks">
-        <li><a href="#">Problems</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">GitHub</a></li>
-      </ul>
-    </nav>         
-  </header>
-  <section id="main-section" class="pt-2pr">
-    <div class="wrap-2">
-      <h1 class="heading-1">Math Solver</h1>
-      <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis ipsam dignissimos in maxime fugit ex.</p>
-      <br>
-      <div class="flex-container2">
-        <div class="flex-item">
-          <h2 class="heading-2">Math</h2>
-          <div class="hr"></div>
-          <ul class="home-nav">
-            <li><a href="QuadraticEquation.html">Quadratic Equation Solver</a></li>
-            <li><a href="#">Prime number checker</a></li>
-            <li><a href="#">Scientific Calculator</a></li>
-            <li><a href="#">Matrix Processor</a></li>
-            <li><a href="#">Random Number Calculator</a></li>
-          </ul>
-        </div>
-        <div class="flex-item">
-          <h2 class="heading-2">Finance</h2>
-          <div class="hr"></div>
-          <ul class="home-nav">
-            <li><a href="#">Investment Calculator</a></li>
-            <li><a href="#">Mortgage Calculator</a></li>
-            <li><a href="#">Loan Calculator</a></li>
-          </ul>
-        </div>
-        <div class="flex-item">
-          <h2 class="heading-2">Fitness & Health</h2>
-          <div class="hr"></div>
-          <ul class="home-nav">
-            <li><a href="#">BMI Calculator</a></li>
-            <li><a href="#">Ideal Weight Calculator</a></li>
-            <li><a href="#">Calorie Intake Calculator</a></li>
+    <nav id ="navbar">
+      <div class="wrap">
+        <div class="flex-container">
+          <div class="logo">
+            <!-- <img src="/img/logo.png" alt="logo"> -->
+            <i class="fas fa-infinity fa-2x"><a href="index.html"> </a></i>
+            <h2 class="txt-logo txt-primary"><a href="index.html">Math<strong>Solver</strong></a></h2>
+          </div>
+          <ul>
+            <li><a href="#" class="current">Home</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">GitHub</a></li>
           </ul>
         </div>
       </div>
+    </nav>         
+  </header>
+  <section id="showcase">
+    <div class="wrap">
+      <div class="flex-container py-2">
+        <h1 class="heading heading-l bold">JavaScript Math Solver</h1>
+        <p class="p-l8">MathSolver is a small collection of calculators written in vanilla JavaScript.</p>
+        <div class="buttons-wrap">
+          <a href="#calculators"><button class="btn">Explore</button></a>
+          <button class="btn btn-light">GitHub</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="calculators">
+    <div class="wrap">
+      <h1 class="heading heading-m">Calculator Collection</h1>
+        <div class="grid-container">
+            <div class="card" id="card-1">
+              <div class="card-top">
+                <h2 class="heading heading-s">Simple Calculator</h2>
+              </div>
+              <div class="card-bottom">
+                <p class="p-15 text-justify">Calculator provides elemenrtary mathematical functions in a beautifully designed app. Perform basic calculations such as addition, subtraction and more.</p> 
+                <a href="#"><button class="btn">Start</button></a> 
+              </div>
+            </div>
+            <div class="card" id="card-2">
+              <div class="card-top">
+                <h2 class="heading heading-s">Scientific Calculator</h2>
+              </div>
+              <div class="card-bottom">
+                <p class="p-15 text-justify">A beautiful, online scientific calculator with advanced features for evaluating percentages, fractions, exponential functions, logarithms, trigonometry...</p>  
+                <button class="btn">Start</button>
+              </div>
+            </div>
+            <div class="card" id="card-3">
+              <div class="card-top">
+                <h2 class="heading heading-s">Quadratic <br>Equation Solver</h2>
+              </div>
+              <div class="card-bottom">
+                <p class="p-15 text-justify">Quadratic Equation Solver. We can help you solve an equation of the form "ax^2 + bx + c = 0". Just enter the values of a, b and c.</p>  
+                <a href="QuadraticEquation.html"><button class="btn">Start</button></a>
+              </div>
+            </div>
+            <div class="card" id="card-4">
+              <div class="card-top">
+                <h2 class="heading heading-s">Prime Number Checker</h2>
+              </div>
+              <div class="card-bottom">
+                <p class="p-15 text-justify">
+                  Enter a number and the Prime Number Checker will determine if it is a prime number or not. Prime postive numbers that have exactly two factors.</p> 
+                <button class="btn">Start</button>
+              </div>
+            </div>
+        </div>
     </div>
   </section>
 </body>
