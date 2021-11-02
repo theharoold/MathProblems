@@ -24,10 +24,13 @@ p {
   margin: 10px 0;
   color: #fff;
 }
+
 a {
   color: #fff;
   text-decoration: none;
 }
+
+mjx-container.MathJax { pointer-events: none; }
 
 /* Utility Classes */
 .btn {
@@ -57,9 +60,14 @@ a {
   background-color: #fff;
 }
 
-.btn-light-red {
-  color: rgb(255, 31, 31);
-  background: #fff;
+.btn-orange {
+  background-color: #ee9d40;
+  color: #fff;
+}
+
+.btn-orange-light {
+  color: #da9648;
+  background-color: #fff;
 }
 
 .btn-red {
@@ -67,28 +75,29 @@ a {
   color: #fff;
 }
 
-.btn:hover {
-  box-shadow: 0 0 20px rgba(48, 155, 255, 0.747);
+.btn-light-red {
+  color: rgb(255, 31, 31);
+  background: #fff;
 }
 
+.btn:hover,
 .btn-light:hover {
   box-shadow: 0 0 20px rgba(48, 155, 255, 0.747);
 }
 
-.btn-saints-light:hover {
-  box-shadow: 0 0 20px #a264d8d8;
-}
-
+.btn-red:hover,
 .btn-light-red:hover {
   box-shadow: 0 0 20px rgba(255, 48, 48, 0.747);
 }
 
-.btn-red:hover {
-  box-shadow: 0 0 20px rgba(255, 48, 48, 0.747);
+.btn-saints:hover,
+.btn-saints-light:hover {
+  box-shadow: 0 0 20px #a264d8d8;
 }
 
-.btn-saints:hover {
-  box-shadow: 0 0 20px #a264d8d8;
+.btn-orange:hover,
+.btn-orange-light:hover {
+  box-shadow: 0 0 20px rgba(221, 185, 103, 0.747);
 }
 
 .heading {
@@ -145,6 +154,10 @@ a {
   background: rgb(235, 61, 61);
 }
 
+.theme-orange {
+  background: rgb(235, 168, 61);
+}
+
 .theme-blue{
   background: dodgerblue;
 }
@@ -152,6 +165,23 @@ a {
 .inline {
   display: inline;
 }
+
+.showcase {
+  margin-top: -6vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.showcase-40 { height: 40vh; }
+.showcase-100 { height: 100vh; }
 
 /* Navigation Styling */
 header {
@@ -184,13 +214,6 @@ header {
   color: #f4f4f4;
 }
 
-/* #navbar img{
-  max-width: 7.5%;
-  padding: 0;
-  margin-right: 10px;
-  display: inline-block;
-} */
-
 #navbar ul {
   list-style-type: none;
   display: inline-flex;
@@ -212,19 +235,13 @@ header {
   font-weight: 500;
 }
 
-/* Showcase Section Styling */
+/* Showcase Section Styling - Homepage */
 #showcase {
-  margin-top: -6vh;
-  height: 100vh;
-  width: 100%;
-  text-align: center;
-  color: white;
-  overflow: hidden;
   background: linear-gradient(rgba(119, 82, 151, 0.897), rgb(22, 22, 22)), 
-  url("https://images.unsplash.com/photo-1563212034-a3c52118cce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") 
-  fixed no-repeat center center/cover;
+  url('/img/calculator.jpg');
   display: flex;
   align-items: center;
+  margin-top: -6vh;
 }
 
 #showcase .flex-container {
@@ -241,6 +258,10 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+#showcase .buttons-wrap i {
+  padding-right: 5px;
 }
 
 #showcase .btn {
@@ -342,12 +363,9 @@ header {
 }
 
 #card-4 .card-top {
-  background: linear-gradient(rgba(236, 216, 36, 0.9), rgba(22, 22, 22,0.8)),
+  background: linear-gradient(rgba(236, 159, 36, 0.9), rgba(22, 22, 22,0.8)),
   url('https://images.unsplash.com/photo-1502570149819-b2260483d302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
 }
-
-#card-4 button { background: rgb(172, 157, 27); }
-#card-4 button:hover { box-shadow: 0 0 20px rgba(172, 157, 27, 0.7); }
 
 #calculators h1{
   text-align: center;
@@ -363,17 +381,8 @@ header {
 
 /* Quadratic Equation Solver Styling */
 #showcase-quadratic {
-  margin-top: -6vh;
-  height: 40vh;
-  width: 100%;
-  text-align: center;
-  color: white;
-  overflow: hidden;
   background: linear-gradient(rgba(36, 123, 236, 0.9), rgb(22, 22, 22)), 
-  url("https://images.unsplash.com/photo-1563212034-a3c52118cce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") 
-  fixed no-repeat center center/cover;
-  display: flex;
-  align-items: center;
+  url('/img/calculator.jpg');
 }
 
 #showcase-quadratic .flex-container {
@@ -447,12 +456,102 @@ header {
 
 #quadratic-main .number-input:focus { border-color: #f4f4f4; }
 
+/* Prime Number Checker Styling */
+#showcase-isprime {
+  background: linear-gradient(rgba(236, 166, 36, 0.9), rgb(22, 22, 22)), 
+  url('/img/calculator.jpg');
+}
+
+#showcase-isprime .flex-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#showcase-isprime .buttons-wrap {
+  height: 50px;
+  width: 400px;
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#showcase-isprime .btn { width: 180px; }
+
+#prime-main {
+  padding-top: 30px;
+  height: 60vh;
+}
+
+#prime-main .btn {
+  width: 100%;
+  margin: 10px 0;
+  padding: 13px 10px;
+}
+
+#prime-main .info-left { max-width: 45%; }
+
+#prime-main .form-wrap {
+  background: rgb(39, 39, 39);
+  width: 40%;
+  height: 360px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#prime-main .flex-container { align-items: center; justify-content: space-between; }
+
+#prime-main .form-wrap .flex-container { justify-content: space-between; }
+
+#prime-main .number-input {
+  width: 100%;
+  padding: 13px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #f4f4f49d;
+  background-color: #f4f4f400;
+  color: #fff;
+}
+
+#prime-main .form-wrap .form-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#prime-main .form-wrap .form-heading #equationPreview{
+  background-color: #353535;
+  padding: 3px 8px;
+}
+
+#prime-main .number-input:focus { border-color: #f4f4f4; }
+
+#prime-main #result {
+  background-color: #1e1e1e;
+  padding: 6px 13px;
+  margin-top: 4%;
+  border-radius: 10px;
+  border: 1px solid #f4f4f47e;
+  text-align: center;
+
+  /* Changing trough JS */
+  display: none;
+}
+
 /* Footer Styling */
 footer {
+  clear: both;
   color: white;
   background-color: #775297;
   text-align: center;
   padding: 20px;
+  height: 70px;
+  width: 100%;
 }
 
 .footer-blue { background-color: rgb(25, 111, 197); }
