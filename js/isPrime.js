@@ -4,7 +4,8 @@ function checkNumber() {
     let result;
 
     if (Number.isInteger(numberToCheck) && numberToCheck >= 1) {
-        result = isPrime(numberToCheck) ? (numberToCheck + " is a prime number") : (numberToCheck + " is a composite number");
+        result = isPrime(numberToCheck) ? (numberToCheck + " is a prime number") : 
+        (numberToCheck + " is a composite number");
     } else {
         result = "Please enter a natural number greater than one."
     }
@@ -31,7 +32,7 @@ function isPrime(number) {
     if (number % 2 == 0 || number % 3 == 0) 
         return false;
     const max = Math.floor(Math.sqrt(number)+1);
-    for (let i = 6; i < max; i+=6) {
+    for (let i = 6; i <= max; i+=6) {
         if ((number % (i - 1) == 0) || (number % (i + 1) == 0))
             return false;
     }
