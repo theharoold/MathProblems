@@ -1,17 +1,21 @@
 function checkNumber() {
     let numberToCheck = parseFloat(document.getElementById("input_number").value);
     let resultParagraph = document.getElementById("result");
-    let result;
 
-    if (Number.isInteger(numberToCheck) && numberToCheck >= 1) {
-        result = isPrime(numberToCheck) ? (numberToCheck + " is a prime number") : 
-        (numberToCheck + " is a composite number");
-    } else {
-        result = "Please enter a natural number greater than one."
-    }
+    let result = getResult(numberToCheck, result);
 
     resultParagraph.style.display = "block";
     resultParagraph.innerHTML = result;
+}
+
+function getResult(numberToCheck, result) {
+    if (Number.isInteger(numberToCheck) && numberToCheck >= 1) {
+        result = isPrime(numberToCheck) ? (numberToCheck + " is a prime number") :
+            (numberToCheck + " is a composite number");
+    } else {
+        result = "Please enter a natural number greater than one.";
+    }
+    return result;
 }
 
 function disablePlaceholder(){
