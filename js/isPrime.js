@@ -10,7 +10,8 @@ function checkNumber() {
 
 function getResult(numberToCheck) {
     if (Number.isInteger(numberToCheck) && numberToCheck > 1) {
-        return isPrime(numberToCheck) ? (numberToCheck + " is a prime number") :
+        return isPrime(numberToCheck) ? 
+            (numberToCheck + " is a prime number") :
             (numberToCheck + " is a composite number");
     }    
     return "Please enter a natural number greater than one.";
