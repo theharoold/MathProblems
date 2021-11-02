@@ -9,7 +9,7 @@ function checkNumber() {
 }
 
 function getResult(numberToCheck, result) {
-    if (Number.isInteger(numberToCheck) && numberToCheck >= 1) {
+    if (Number.isInteger(numberToCheck) && numberToCheck > 1) {
         return isPrime(numberToCheck) ? (numberToCheck + " is a prime number") :
             (numberToCheck + " is a composite number");
     } else {
