@@ -66,9 +66,9 @@
           </div>
           <form>
             <div class="flex-container">
-              <input type="number" class="number-input" id="input_a" placeholder="a">           
-              <input type="number" class="number-input" id="input_b" placeholder="b">
-              <input type="number" class="number-input" id="input_c" placeholder="c">
+              <input type="number" class="number-input" id="input_a" placeholder="a"  onfocus="disablePlaceholder('input_a')" onblur="resetPlaceholder('input_a','a')">           
+              <input type="number" class="number-input" id="input_b" placeholder="b" onfocus="disablePlaceholder('input_b')" onblur="resetPlaceholder('input_b','b')">
+              <input type="number" class="number-input" id="input_c" placeholder="c" onfocus="disablePlaceholder('input_c')" onblur="resetPlaceholder('input_c','c')">
             </div>
             <button type="button" class="btn " onclick="displayInput()">Compute</button>
           </form>
@@ -80,5 +80,6 @@
     </div>
   </section>
   <!-- <footer class="footer-blue">Created by <a href="https://github.com/theharoold" class="bold" target="_blank">@theharoold</a> and <a href="https://github.com/bogdanm01" class="bold" target="_blank">@bogdanm01</a> with &#10084;</footer> -->
+  <script src="js/placeholderReset.js"></script>
 </body>
 </html>

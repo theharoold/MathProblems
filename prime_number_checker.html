@@ -56,7 +56,7 @@
           </div>
           <form>
             <div class="flex-container">
-              <input type="number" class="number-input" id="input_number" placeholder="natural number" onfocus="disablePlaceholder()" onblur="resetPlaceholder('natural number')">           
+              <input type="number" class="number-input" id="input_number" placeholder="natural number" onfocus="disablePlaceholder('input_number')" onblur="resetPlaceholder('input_number', 'natural number')">           
             </div>
             <button type="button" class="btn btn-orange" onclick="checkNumber()">Check number</button>
           </form>
@@ -68,5 +68,6 @@
   </section>
   <!-- <footer>Created by <a href="https://github.com/theharoold" class="bold" target="_blank">@theharoold</a> and <a href="https://github.com/bogdanm01" class="bold" target="_blank">@bogdanm01</a> with &#10084;</footer> -->
   <script src="js/isPrime.js"></script>
+  <script src="js/placeholderReset.js"></script>
 </body>
 </html>

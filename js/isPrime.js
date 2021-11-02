@@ -17,14 +17,6 @@ function getResult(numberToCheck, result) {
     }
 }
 
-function disablePlaceholder(){
-    document.getElementById("input_number").setAttribute("placeholder","");
-}
-
-function resetPlaceholder(text){
-    document.getElementById("input_number").setAttribute("placeholder", text);
-}
-
 function isPrime(number) {
     // 1 isn't prime
     if (number == 1)
