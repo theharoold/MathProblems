@@ -270,9 +270,10 @@ header {
 
 /* Calculators Section Styling */
 #calculators {
-  height: 100vh;
+  height: 100%;
   background: #1e1e1e;
   padding-top: 4%;
+  padding-bottom: 11%;
   width: 100%;
   align-items: center;
   margin: auto;
@@ -405,8 +406,9 @@ header {
 
 /* Main Quadratic Section Styling */
 #quadratic-main {
-  padding-top: 30px;
-  height: 60vh;
+  padding-top: 40px;
+  height: 100%;
+  padding-bottom: 3.5%;
 }
 
 #quadratic-main .btn {
@@ -481,8 +483,9 @@ header {
 #showcase-isprime .btn { width: 180px; }
 
 #prime-main {
-  padding-top: 30px;
-  height: 60vh;
+  padding-top: 40px;
+  height: 100%;
+  padding-bottom: 3.5%;
 }
 
 #prime-main .btn {
