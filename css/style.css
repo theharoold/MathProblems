@@ -175,7 +175,6 @@ mjx-container.MathJax { pointer-events: none; }
   display: flex;
   align-items: center;
   background-position: center center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -238,7 +237,7 @@ header {
 /* Showcase Section Styling - Homepage */
 #showcase {
   background: linear-gradient(rgba(119, 82, 151, 0.897), rgb(22, 22, 22)), 
-  url('/img/calculator.jpg');
+  url('/img/calculator.jpg') fixed;
   display: flex;
   align-items: center;
   margin-top: -6vh;
@@ -385,7 +384,7 @@ header {
 /* Quadratic Equation Solver Styling */
 #showcase-quadratic {
   background: linear-gradient(rgba(36, 123, 236, 0.9), rgb(22, 22, 22)), 
-  url('/img/calculator.jpg');
+  url('/img/calculator.jpg') fixed;
 }
 
 #showcase-quadratic .flex-container {
@@ -463,7 +462,7 @@ header {
 /* Prime Number Checker Styling */
 #showcase-isprime {
   background: linear-gradient(rgba(236, 166, 36, 0.9), rgb(22, 22, 22)), 
-  url('/img/calculator.jpg');
+  url('/img/calculator.jpg') fixed;
 }
 
 #showcase-isprime .flex-container {
