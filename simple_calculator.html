@@ -13,6 +13,7 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="js/quadraticFormula.js"></script>
+  <script src="js/calculator.js"></script>
 </head>
 <body>
   <header>
@@ -38,25 +39,26 @@
     <div class="wrap">
       <div class="flex-container">
         <form id="calculator" name="calc">
+          <input id="expression" class="calculator-display" name="txt2" type="text" readonly="">
           <input id="inputValue" class="calculator-display" name="txt" type="text" readonly="">
-          <span class="calc-btn clear">c</span>
-          <span class="calc-btn">/</span>
-          <span class="calc-btn">*</span>
-          <span class="calc-btn">7</span>
-          <span class="calc-btn">8</span>
-          <span class="calc-btn">9</span>
-          <span class="calc-btn">-</span>
-          <span class="calc-btn">4</span>
-          <span class="calc-btn">5</span>
-          <span class="calc-btn">6</span>
-          <span class="calc-btn">+</span>
-          <span class="calc-btn">1</span>
-          <span class="calc-btn">2</span>
-          <span class="calc-btn">3</span>
-          <span class="calc-btn equals">=</span>
-          <span class="calc-btn">+ / -</span>
-          <span class="calc-btn">0</span>
-          <span class="calc-btn">.</span>
+          <span class="calc-btn clear" onclick="clearScreen()">c</span>
+          <span class="calc-btn" onclick="setDisplay('/',2)">/</span>
+          <span class="calc-btn" onclick="setDisplay('*',2)">*</span>
+          <span class="calc-btn" onclick="setDisplay('7',1)">7</span>
+          <span class="calc-btn" onclick="setDisplay('8',1)">8</span>
+          <span class="calc-btn" onclick="setDisplay('9',1)">9</span>
+          <span class="calc-btn" onclick="setDisplay('-',2)">-</span>
+          <span class="calc-btn" onclick="setDisplay('4',1)">4</span>
+          <span class="calc-btn" onclick="setDisplay('5',1)">5</span>
+          <span class="calc-btn" onclick="setDisplay('6',1)">6</span>
+          <span class="calc-btn" onclick="setDisplay('+',2)">+</span>
+          <span class="calc-btn" onclick="setDisplay('1',1)">1</span>
+          <span class="calc-btn" onclick="setDisplay('2',1)">2</span>
+          <span class="calc-btn" onclick="setDisplay('3',1)">3</span>
+          <span class="calc-btn equals" onclick="setDisplay(null, 3)">=</span>
+          <span class="calc-btn" onclick="setDisplay('+-',1)">+ / -</span>
+          <span class="calc-btn" onclick="setDisplay('0',1)">0</span>
+          <span class="calc-btn" onclick="setDisplay('.',1)">.</span>
         </form>
       </div>     
     </div>
