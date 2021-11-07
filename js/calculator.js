@@ -55,15 +55,15 @@ function concatenateOperator(part) {
             expression += current_number;
             expression += part;
             current_number = "";
-        } else {
-            expression = (expression.substring(0, expression.length - 2) + part);
-        }
-        document.getElementById("expression").value = expression;
+        } 
+    } else {
+        expression = (expression.substring(0, expression.length - 1) + part);
     }
+    document.getElementById("expression").value = expression;
 }
 
 function equal() {
-    if (current_number != "") {
+    if (current_number) {
         if (current_number.charAt(0) == "-")
             current_number = "(" + current_number + ")";
         expression += current_number;
@@ -72,7 +72,7 @@ function equal() {
     } 
     let last = expression.charAt(expression.length - 1);
     if (last == "/" || last == "*" || last == "+" || last == "-") {
-        expression = expression.substring(0, expression.length - 2);
+        expression = expression.substring(0, expression.length - 1);
         document.getElementById("expression").value = expression;
     }
     let result = math.eval(expression);
@@ -106,6 +106,5 @@ function clearScreen() {
 }
 
 /* ZA URADITI:
-    - Šta se dešava kada korisnik klikne neko dugme nakon što je izračunata prethodna vrednost?
-    - Clear dugme - DONE
+    - 25+(-698)* greška
 */
