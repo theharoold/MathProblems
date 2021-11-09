@@ -394,13 +394,10 @@ header {
 }
 
 #showcase-quadratic .buttons-wrap {
-  /* border: 1px #ddd solid; */
-  height: 50px;
   width: 400px;
   margin-top: 14px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 #showcase-quadratic .btn { width: 180px; }
@@ -574,11 +571,32 @@ header {
 
 #calc-section #calculator .calculator-display {
   grid-column: span 4;
-  height: 90px;
+  height: 60px;
   text-align: right;
   border: 1px solid #1e1e1e;
-  padding: 10px;
+  border-top: 2px solid rgb(41, 41, 41);
+  padding: 3px 10px;
+  padding-bottom: 15px;
   font-size: 20px;
+  width: 400px;
+  outline: none;
+  cursor: initial;
+  background-color: rgb(41, 41, 41);
+}
+
+#calc-section #calculator 
+.calculator-display-top {
+  padding-top: 25px;
+  grid-column: span 4;
+  height: 45px;
+  text-align: right;
+  border: 1px solid #1e1e1e;
+  border-bottom: 2px solid rgb(41, 41, 41);
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  font-size: 17px;
+  color: rgb(168, 168, 168);
   width: 400px;
   outline: none;
   cursor: initial;
@@ -618,6 +636,8 @@ header {
   height: 160px;
   background: #775297;
 }
+
+
 
 /* Footer Styling */
 footer {
